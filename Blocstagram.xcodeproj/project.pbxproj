@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3D85A919E44A1100BB2B92 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D85A819E44A1100BB2B92 /* User.m */; };
 		2AEF98B219E42447007ACD9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B119E42447007ACD9D /* main.m */; };
 		2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B419E42447007ACD9D /* AppDelegate.m */; };
 		2AEF98B819E42447007ACD9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B719E42447007ACD9D /* ViewController.m */; };
@@ -25,6 +26,9 @@
 		2AEF98E819E4255F007ACD9D /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98DE19E4255F007ACD9D /* 9.jpg */; };
 		2AEF98E919E4255F007ACD9D /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98DF19E4255F007ACD9D /* 10.jpg */; };
 		2AEF98EC19E425C8007ACD9D /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */; };
+		FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E119E49ED8007FF7B9 /* Media.m */; };
+		FC9F23E519E49F4B007FF7B9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E419E49F4B007FF7B9 /* Comment.m */; };
+		FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E719E49FFF007FF7B9 /* DataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3D85A719E44A1100BB2B92 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		2A3D85A819E44A1100BB2B92 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2AEF98AC19E42447007ACD9D /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AEF98B019E42447007ACD9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AEF98B119E42447007ACD9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +69,12 @@
 		2AEF98DF19E4255F007ACD9D /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		2AEF98EA19E425C8007ACD9D /* ImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagesTableViewController.h; sourceTree = "<group>"; };
 		2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
+		FC9F23E019E49ED8007FF7B9 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
+		FC9F23E119E49ED8007FF7B9 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		FC9F23E319E49F4B007FF7B9 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
+		FC9F23E419E49F4B007FF7B9 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		FC9F23E619E49FFF007FF7B9 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		FC9F23E719E49FFF007FF7B9 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,14 @@
 				2AEF98B419E42447007ACD9D /* AppDelegate.m */,
 				2AEF98EA19E425C8007ACD9D /* ImagesTableViewController.h */,
 				2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */,
+				FC9F23E319E49F4B007FF7B9 /* Comment.h */,
+				FC9F23E419E49F4B007FF7B9 /* Comment.m */,
+				FC9F23E619E49FFF007FF7B9 /* DataSource.h */,
+				FC9F23E719E49FFF007FF7B9 /* DataSource.m */,
+				FC9F23E019E49ED8007FF7B9 /* Media.h */,
+				FC9F23E119E49ED8007FF7B9 /* Media.m */,
+				2A3D85A719E44A1100BB2B92 /* User.h */,
+				2A3D85A819E44A1100BB2B92 /* User.m */,
 				2AEF98B619E42447007ACD9D /* ViewController.h */,
 				2AEF98B719E42447007ACD9D /* ViewController.m */,
 				2AEF98B919E42447007ACD9D /* Main.storyboard */,
@@ -272,6 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9F23E519E49F4B007FF7B9 /* Comment.m in Sources */,
+				FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */,
+				FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */,
+				2A3D85A919E44A1100BB2B92 /* User.m in Sources */,
 				2AEF98B819E42447007ACD9D /* ViewController.m in Sources */,
 				2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */,
 				2AEF98B219E42447007ACD9D /* main.m in Sources */,
@@ -468,6 +492,7 @@
 				2AEF98D119E42447007ACD9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AEF98D219E42447007ACD9D /* Build configuration list for PBXNativeTarget "BlocstagramTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +501,7 @@
 				2AEF98D419E42447007ACD9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

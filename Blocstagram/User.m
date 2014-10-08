@@ -1,13 +1,13 @@
 //
-//  ImagesTableViewController.h
+//  User.m
 //  Blocstagram
 //
 //  Created by Jon Jungemann on 10/7/14.
 //  Copyright (c) 2014 Bloc. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "User.h"
 
-@interface ImagesTableViewController : UITableViewController
+@implementation User
 
 @end

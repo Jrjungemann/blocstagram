@@ -7,6 +7,10 @@
 //
 
 #import "ImagesTableViewController.h"
+#import "DataSource.h"
+#import "Media.h"
+#import "User.h"
+#import "Comment.h"
 
 @interface ImagesTableViewController ()
 
@@ -14,16 +18,10 @@
 
 @implementation ImagesTableViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    for (int i = 1; i <= 10; i++) {
-        NSString *imageName = [NSString stringWithFormat:@"%d.jpg", i];
-        UIImage *image = [UIImage imageNamed:imageName];
-        if (image) {
-            [self.images addObject:image];
-        }
-    }
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
     
@@ -36,9 +34,16 @@
 
 #pragma mark - Table view data source
 
+- (NSMutableArray *) items {
+    
+    NSMutableArray *items = [DataSource sharedInstance].mediaItems;
+    
+    return items;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.images.count;
+         return [self items].count;
     
 }
 
@@ -47,14 +52,15 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        self.images = [NSMutableArray array];
         
     }
     return self;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIImage *image = self.images[indexPath.row];
+    Media *item = [self items][indexPath.row];
+    UIImage *image = item.image;
+
     return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
 }
 
@@ -78,8 +84,8 @@
         [cell.contentView addSubview:imageView];
     }
     
-    UIImage *image = self.images[indexPath.row];
-    imageView.image = image;
+    Media *item = [self items][indexPath.row];
+    imageView.image = item.image;
  
     return cell;
 }
@@ -94,10 +100,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-    
-        NSUInteger indexNumber = [indexPath indexAtPosition:[indexPath length] -1];
         
-        [self.images removeObjectAtIndex:indexNumber];
+        [[self items] removeObjectAtIndex:indexPath.row];
         
         [self.tableView beginUpdates];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
