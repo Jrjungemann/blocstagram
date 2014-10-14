@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A3D85A919E44A1100BB2B92 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D85A819E44A1100BB2B92 /* User.m */; };
+		2AAD5DB119ED8E16007BE78C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD5DB019ED8E16007BE78C /* LoginViewController.m */; };
 		2AEE0A2C19E575AE001C5D8A /* MediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEE0A2B19E575AE001C5D8A /* MediaTableViewCell.m */; };
 		2AEF98B219E42447007ACD9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B119E42447007ACD9D /* main.m */; };
 		2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B419E42447007ACD9D /* AppDelegate.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		2A3D85A719E44A1100BB2B92 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2A3D85A819E44A1100BB2B92 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		2AAD5DAF19ED8E16007BE78C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2AAD5DB019ED8E16007BE78C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2AEE0A2A19E575AE001C5D8A /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		2AEE0A2B19E575AE001C5D8A /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		2AEF98AC19E42447007ACD9D /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +131,8 @@
 				2AEE0A2B19E575AE001C5D8A /* MediaTableViewCell.m */,
 				FC9F23E619E49FFF007FF7B9 /* DataSource.h */,
 				FC9F23E719E49FFF007FF7B9 /* DataSource.m */,
+				2AAD5DAF19ED8E16007BE78C /* LoginViewController.h */,
+				2AAD5DB019ED8E16007BE78C /* LoginViewController.m */,
 				FC9F23E319E49F4B007FF7B9 /* Comment.h */,
 				FC9F23E419E49F4B007FF7B9 /* Comment.m */,
 				FC9F23E019E49ED8007FF7B9 /* Media.h */,
@@ -301,6 +306,7 @@
 				FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */,
 				2AEE0A2C19E575AE001C5D8A /* MediaTableViewCell.m in Sources */,
 				FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */,
+				2AAD5DB119ED8E16007BE78C /* LoginViewController.m in Sources */,
 				2A3D85A919E44A1100BB2B92 /* User.m in Sources */,
 				2AEF98B819E42447007ACD9D /* ViewController.m in Sources */,
 				2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */,
