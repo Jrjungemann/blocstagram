@@ -163,7 +163,6 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self infiniteScrollIfNecessary];
-    NSLog(@"called");
 }
 
 /*
