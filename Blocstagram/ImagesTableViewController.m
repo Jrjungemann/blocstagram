@@ -26,7 +26,9 @@
     
     [[DataSource sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
 
-    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
+
     [self.tableView registerClass:[MediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
     
 }
@@ -131,6 +133,28 @@
         Media *item = [DataSource sharedInstance].mediaItems[indexPath.row];
         [[DataSource sharedInstance] deleteMediaItem:item];
     }
+}
+
+- (void) refreshControlDidFire:(UIRefreshControl *) sender {
+    [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+        [sender endRefreshing];
+    }];
+}
+
+- (void) infiniteScrollIfNecessary {
+    NSIndexPath *bottomIndexPath = [[self.tableView indexPathsForVisibleRows] lastObject];
+
+    if (bottomIndexPath && bottomIndexPath.row == [DataSource sharedInstance].mediaItems.count - 1) {
+        // The very last cell is on screen
+        [[DataSource sharedInstance] requestOldItemsWithCompletionHandler:nil];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self infiniteScrollIfNecessary];
+    NSLog(@"called");
 }
 
 /*
