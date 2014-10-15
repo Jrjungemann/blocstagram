@@ -157,11 +157,14 @@
 - (void) requestNewItemsWithCompletionHandler:(NewItemCompletionBlock)completionHandler {
     self.thereAreNoMoreOlderMessages = NO;
     
+    NSString *minID = [[self.mediaItems firstObject] idNumber];
+    NSMutableDictionary *parameters = [NSMutableDictionary new];
+    
     if (self.isRefreshing == NO) {
         self.isRefreshing = YES;
-        
-        NSString *minID = [[self.mediaItems firstObject] idNumber];
-        NSDictionary *parameters = @{@"min_id": minID};
+        if (minID) {
+            parameters[@"min_id"] = minID;
+        }
         
         [self populateDataWithParameters:parameters completionHandler:^(NSError *error) {
             self.isRefreshing = NO;
