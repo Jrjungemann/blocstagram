@@ -62,6 +62,14 @@
                         self.mediaItems = mutableMediaItems;
                         [self didChangeValueForKey:@"mediaItems"];
                         
+                        /////// DELETE THIS AFTER RETRYING IMAGE DOWNLOADS
+                        for (Media *mediaItem in mutableMediaItems) {
+                            if (mediaItem.image == nil) {
+                                [self downloadImageForMediaItem:mediaItem];
+                            }
+                        }
+                        /////// DELETE ABOVE
+                        
                         [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
                             self.isRefreshing = NO;
                         }];
@@ -121,8 +129,8 @@
                 if (responseData) {
                     NSError *jsonError;
                     NSDictionary *feedDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
-                    
                     if (feedDictionary) {
+                        
                         dispatch_async(dispatch_get_main_queue(), ^{
                             // done networking, go back on the main thread
                             [self parseDataFromFeedDictionary:feedDictionary fromRequestWithParameters:parameters];
@@ -146,7 +154,7 @@
     }
 }
 
-- (void) parseDataFromFeedDictionary:(NSDictionary *) feedDictionary fromRequestWithParameters:(NSDictionary *)parameters {
+- (void) parseDataFromFeedDictionary:(NSDictionary *)feedDictionary fromRequestWithParameters:(NSDictionary *)parameters {
     NSArray *mediaArray = feedDictionary[@"data"];
     
     NSMutableArray *tmpMediaItems = [NSMutableArray array];
