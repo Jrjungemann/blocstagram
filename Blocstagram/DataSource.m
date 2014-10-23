@@ -62,6 +62,14 @@
                         self.mediaItems = mutableMediaItems;
                         [self didChangeValueForKey:@"mediaItems"];
                         
+                        //// Delete after retrying image downloads
+                        for (Media *mediaItem in mutableMediaItems) {
+                            if (mediaItem.image == nil) {
+                                [self downloadImageForMediaItem:mediaItem];
+                            }
+                        }
+                        //// Delete Above
+                        
                         [[DataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
                             self.isRefreshing = NO;
                         }];
