@@ -7,7 +7,7 @@
 //
 
 #import "MediaFullScreenViewController.h"
-#import "Media.h"
+#import "UIViewController+Sharing.h"
 
 @interface MediaFullScreenViewController () <UIScrollViewDelegate>
 
@@ -69,15 +69,7 @@
 }
 
 - (void) shareImage {
-    
-    NSMutableArray *sharedImage = [NSMutableArray array];
-    
-    [sharedImage addObject:self.media.image];
-    
-    UIActivityViewController *imageShare = [[UIActivityViewController alloc] initWithActivityItems:sharedImage applicationActivities:nil];
-    
-    [self presentViewController:imageShare animated:YES completion:nil];
-    
+    [self shareMedia:self.media];
 }
 
 - (void) viewWillLayoutSubviews {

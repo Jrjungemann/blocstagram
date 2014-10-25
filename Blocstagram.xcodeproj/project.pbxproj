@@ -31,6 +31,7 @@
 		2AEF98E919E4255F007ACD9D /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98DF19E4255F007ACD9D /* 10.jpg */; };
 		2AEF98EC19E425C8007ACD9D /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */; };
 		7C63C602FEEAC6C797681068 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9704809B9F5BCDB41B679F0D /* libPods.a */; };
+		FC6C6CC319F9C847007745D0 /* UIViewController+Sharing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C6CC219F9C847007745D0 /* UIViewController+Sharing.m */; };
 		FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E119E49ED8007FF7B9 /* Media.m */; };
 		FC9F23E519E49F4B007FF7B9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E419E49F4B007FF7B9 /* Comment.m */; };
 		FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E719E49FFF007FF7B9 /* DataSource.m */; };
@@ -85,6 +86,8 @@
 		2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagesTableViewController.m; sourceTree = "<group>"; };
 		76FFAC5C3A29A85DC8909ABC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9704809B9F5BCDB41B679F0D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6C6CC119F9C847007745D0 /* UIViewController+Sharing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Sharing.h"; sourceTree = "<group>"; };
+		FC6C6CC219F9C847007745D0 /* UIViewController+Sharing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Sharing.m"; sourceTree = "<group>"; };
 		FC9F23E019E49ED8007FF7B9 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		FC9F23E119E49ED8007FF7B9 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		FC9F23E319E49F4B007FF7B9 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 				2AEF98BC19E42447007ACD9D /* Images.xcassets */,
 				2AEF98BE19E42447007ACD9D /* LaunchScreen.xib */,
 				2AEF98AF19E42447007ACD9D /* Supporting Files */,
+				FC6C6CC419F9C85F007745D0 /* Categories */,
 			);
 			path = Blocstagram;
 			sourceTree = "<group>";
@@ -224,6 +228,15 @@
 				9704809B9F5BCDB41B679F0D /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC6C6CC419F9C85F007745D0 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				FC6C6CC119F9C847007745D0 /* UIViewController+Sharing.h */,
+				FC6C6CC219F9C847007745D0 /* UIViewController+Sharing.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +392,7 @@
 				2A3D85A919E44A1100BB2B92 /* User.m in Sources */,
 				2AEF98B819E42447007ACD9D /* ViewController.m in Sources */,
 				2A9A403E19F8227900935263 /* MediaFullScreenViewController.m in Sources */,
+				FC6C6CC319F9C847007745D0 /* UIViewController+Sharing.m in Sources */,
 				2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */,
 				2AEF98B219E42447007ACD9D /* main.m in Sources */,
 				2A9A404119F8244700935263 /* MediaFullScreenAnimator.m in Sources */,
