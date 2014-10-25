@@ -58,7 +58,7 @@
     UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     UIColor *buttonColor = [UIColor whiteColor];
     
-    shareButton.frame = CGRectMake(220, 20, 80, 40);
+    shareButton.frame = CGRectMake(220, 40, 80, 30);
     shareButton.backgroundColor = buttonColor;
     
     [shareButton addTarget:self action:@selector(shareImage) forControlEvents:UIControlEventTouchUpInside];
