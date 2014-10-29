@@ -32,6 +32,8 @@
 		2AEF98EC19E425C8007ACD9D /* ImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98EB19E425C8007ACD9D /* ImagesTableViewController.m */; };
 		7C63C602FEEAC6C797681068 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9704809B9F5BCDB41B679F0D /* libPods.a */; };
 		FC6C6CC319F9C847007745D0 /* UIViewController+Sharing.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6C6CC219F9C847007745D0 /* UIViewController+Sharing.m */; };
+		FC9993EC19FC8E050059EB66 /* CircleSpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9993EB19FC8E050059EB66 /* CircleSpinnerView.m */; };
+		FC9993EF19FC930E0059EB66 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9993EE19FC930E0059EB66 /* LikeButton.m */; };
 		FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E119E49ED8007FF7B9 /* Media.m */; };
 		FC9F23E519E49F4B007FF7B9 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E419E49F4B007FF7B9 /* Comment.m */; };
 		FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9F23E719E49FFF007FF7B9 /* DataSource.m */; };
@@ -88,6 +90,10 @@
 		9704809B9F5BCDB41B679F0D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6C6CC119F9C847007745D0 /* UIViewController+Sharing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Sharing.h"; sourceTree = "<group>"; };
 		FC6C6CC219F9C847007745D0 /* UIViewController+Sharing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Sharing.m"; sourceTree = "<group>"; };
+		FC9993EA19FC8E050059EB66 /* CircleSpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleSpinnerView.h; sourceTree = "<group>"; };
+		FC9993EB19FC8E050059EB66 /* CircleSpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleSpinnerView.m; sourceTree = "<group>"; };
+		FC9993ED19FC930E0059EB66 /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		FC9993EE19FC930E0059EB66 /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 		FC9F23E019E49ED8007FF7B9 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		FC9F23E119E49ED8007FF7B9 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		FC9F23E319E49F4B007FF7B9 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -161,6 +167,10 @@
 				2A3D85A819E44A1100BB2B92 /* User.m */,
 				2AEF98B619E42447007ACD9D /* ViewController.h */,
 				2AEF98B719E42447007ACD9D /* ViewController.m */,
+				FC9993EA19FC8E050059EB66 /* CircleSpinnerView.h */,
+				FC9993EB19FC8E050059EB66 /* CircleSpinnerView.m */,
+				FC9993ED19FC930E0059EB66 /* LikeButton.h */,
+				FC9993EE19FC930E0059EB66 /* LikeButton.m */,
 				2AEF98B919E42447007ACD9D /* Main.storyboard */,
 				2AEF98BC19E42447007ACD9D /* Images.xcassets */,
 				2AEF98BE19E42447007ACD9D /* LaunchScreen.xib */,
@@ -388,12 +398,14 @@
 				FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */,
 				2AEE0A2C19E575AE001C5D8A /* MediaTableViewCell.m in Sources */,
 				FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */,
+				FC9993EC19FC8E050059EB66 /* CircleSpinnerView.m in Sources */,
 				2AAD5DB119ED8E16007BE78C /* LoginViewController.m in Sources */,
 				2A3D85A919E44A1100BB2B92 /* User.m in Sources */,
 				2AEF98B819E42447007ACD9D /* ViewController.m in Sources */,
 				2A9A403E19F8227900935263 /* MediaFullScreenViewController.m in Sources */,
 				FC6C6CC319F9C847007745D0 /* UIViewController+Sharing.m in Sources */,
 				2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */,
+				FC9993EF19FC930E0059EB66 /* LikeButton.m in Sources */,
 				2AEF98B219E42447007ACD9D /* main.m in Sources */,
 				2A9A404119F8244700935263 /* MediaFullScreenAnimator.m in Sources */,
 				2AEF98EC19E425C8007ACD9D /* ImagesTableViewController.m in Sources */,
