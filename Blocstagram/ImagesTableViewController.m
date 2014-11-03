@@ -224,7 +224,7 @@
     // Get the frame of the comment view in the same coordinate system
     CGRect commentViewFrameInViewCoordinates = [self.navigationController.view convertRect:self.lastSelectedCommentView.bounds fromView:self.lastSelectedCommentView];
     
-    CGPoint contentOffset = self.initialOffset;
+    CGPoint contentOffset = self.tableView.contentOffset;
     UIEdgeInsets contentInsets = self.initialInset;
     UIEdgeInsets scrollIndicatorInsets = self.initialScrollIndicatorInsets;
     CGFloat heightToScroll = 0;
@@ -268,7 +268,7 @@
 - (void)keyboardWillHide:(NSNotification *)notification
 {
     
-    UIEdgeInsets contentInsets = self.initialInset;
+    UIEdgeInsets contentInsets = self.tableView.contentInset;
     contentInsets.bottom -= self.lastKeyboardAdjustment;
     
     UIEdgeInsets scrollIndicatorInsets = self.initialScrollIndicatorInsets;
