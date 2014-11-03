@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0D4E3B1A07CB55004D155F /* ComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0D4E3A1A07CB55004D155F /* ComposeCommentView.m */; };
 		2A3D85A919E44A1100BB2B92 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D85A819E44A1100BB2B92 /* User.m */; };
 		2A9A403E19F8227900935263 /* MediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A403D19F8227900935263 /* MediaFullScreenViewController.m */; };
 		2A9A404119F8244700935263 /* MediaFullScreenAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9A404019F8244700935263 /* MediaFullScreenAnimator.m */; };
@@ -51,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		208EBE437E0B0CF33887D0A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		2A0D4E391A07CB55004D155F /* ComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeCommentView.h; sourceTree = "<group>"; };
+		2A0D4E3A1A07CB55004D155F /* ComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeCommentView.m; sourceTree = "<group>"; };
 		2A3D85A719E44A1100BB2B92 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		2A3D85A819E44A1100BB2B92 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		2A9A403C19F8227900935263 /* MediaFullScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaFullScreenViewController.h; sourceTree = "<group>"; };
@@ -157,6 +160,8 @@
 				2A9A403D19F8227900935263 /* MediaFullScreenViewController.m */,
 				2AAD5DAF19ED8E16007BE78C /* LoginViewController.h */,
 				2AAD5DB019ED8E16007BE78C /* LoginViewController.m */,
+				2A0D4E391A07CB55004D155F /* ComposeCommentView.h */,
+				2A0D4E3A1A07CB55004D155F /* ComposeCommentView.m */,
 				FC9F23E619E49FFF007FF7B9 /* DataSource.h */,
 				FC9F23E719E49FFF007FF7B9 /* DataSource.m */,
 				FC9F23E319E49F4B007FF7B9 /* Comment.h */,
@@ -397,6 +402,7 @@
 				FC9F23E519E49F4B007FF7B9 /* Comment.m in Sources */,
 				FC9F23E219E49ED8007FF7B9 /* Media.m in Sources */,
 				2AEE0A2C19E575AE001C5D8A /* MediaTableViewCell.m in Sources */,
+				2A0D4E3B1A07CB55004D155F /* ComposeCommentView.m in Sources */,
 				FC9F23E819E49FFF007FF7B9 /* DataSource.m in Sources */,
 				FC9993EC19FC8E050059EB66 /* CircleSpinnerView.m in Sources */,
 				2AAD5DB119ED8E16007BE78C /* LoginViewController.m in Sources */,
