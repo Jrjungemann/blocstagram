@@ -16,7 +16,6 @@
 		2AEF98B219E42447007ACD9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B119E42447007ACD9D /* main.m */; };
 		2AEF98B519E42447007ACD9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B419E42447007ACD9D /* AppDelegate.m */; };
 		2AEF98B819E42447007ACD9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98B719E42447007ACD9D /* ViewController.m */; };
-		2AEF98BB19E42447007ACD9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98B919E42447007ACD9D /* Main.storyboard */; };
 		2AEF98BD19E42447007ACD9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98BC19E42447007ACD9D /* Images.xcassets */; };
 		2AEF98C019E42447007ACD9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF98BE19E42447007ACD9D /* LaunchScreen.xib */; };
 		2AEF98CC19E42447007ACD9D /* BlocstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF98CB19E42447007ACD9D /* BlocstagramTests.m */; };
@@ -62,6 +61,7 @@
 		2A9A404019F8244700935263 /* MediaFullScreenAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaFullScreenAnimator.m; sourceTree = "<group>"; };
 		2AAD5DAF19ED8E16007BE78C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2AAD5DB019ED8E16007BE78C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2AEB53BD1A09329200B9189F /* Blocstagram-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blocstagram-Prefix.pch"; sourceTree = "<group>"; };
 		2AEE0A2A19E575AE001C5D8A /* MediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTableViewCell.h; sourceTree = "<group>"; };
 		2AEE0A2B19E575AE001C5D8A /* MediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewCell.m; sourceTree = "<group>"; };
 		2AEF98AC19E42447007ACD9D /* Blocstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,6 @@
 		2AEF98B419E42447007ACD9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2AEF98B619E42447007ACD9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2AEF98B719E42447007ACD9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2AEF98BA19E42447007ACD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AEF98BC19E42447007ACD9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2AEF98BF19E42447007ACD9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2AEF98C519E42447007ACD9D /* BlocstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2AEF98D519E4253F007ACD9D /* Images */,
+				2AEB53BD1A09329200B9189F /* Blocstagram-Prefix.pch */,
 				2AEF98B319E42447007ACD9D /* AppDelegate.h */,
 				2AEF98B419E42447007ACD9D /* AppDelegate.m */,
 				2AEF98EA19E425C8007ACD9D /* ImagesTableViewController.h */,
@@ -176,7 +176,6 @@
 				FC9993EB19FC8E050059EB66 /* CircleSpinnerView.m */,
 				FC9993ED19FC930E0059EB66 /* LikeButton.h */,
 				FC9993EE19FC930E0059EB66 /* LikeButton.m */,
-				2AEF98B919E42447007ACD9D /* Main.storyboard */,
 				2AEF98BC19E42447007ACD9D /* Images.xcassets */,
 				2AEF98BE19E42447007ACD9D /* LaunchScreen.xib */,
 				2AEF98AF19E42447007ACD9D /* Supporting Files */,
@@ -339,7 +338,6 @@
 				2AEF98E919E4255F007ACD9D /* 10.jpg in Resources */,
 				2AEF98E719E4255F007ACD9D /* 8.jpg in Resources */,
 				2AEF98E519E4255F007ACD9D /* 6.jpg in Resources */,
-				2AEF98BB19E42447007ACD9D /* Main.storyboard in Resources */,
 				2AEF98E419E4255F007ACD9D /* 5.jpg in Resources */,
 				2AEF98E319E4255F007ACD9D /* 4.jpg in Resources */,
 				2AEF98E019E4255F007ACD9D /* 1.jpg in Resources */,
@@ -437,14 +435,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2AEF98B919E42447007ACD9D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2AEF98BA19E42447007ACD9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2AEF98BE19E42447007ACD9D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -539,7 +529,10 @@
 			baseConfigurationReference = 208EBE437E0B0CF33887D0A7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blocstagram/Blocstagram-Prefix.pch";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -550,7 +543,10 @@
 			baseConfigurationReference = 76FFAC5C3A29A85DC8909ABC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blocstagram/Blocstagram-Prefix.pch";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

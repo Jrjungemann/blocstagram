@@ -19,16 +19,11 @@
 
 @property (nonatomic, weak) UIImageView *lastTappedImageView;
 @property (nonatomic, weak) UIView *lastSelectedCommentView;
-@property (nonatomic, assign) CGPoint initialOffset;
-@property (nonatomic, assign) UIEdgeInsets initialInset;
-@property (nonatomic, assign) UIEdgeInsets initialScrollIndicatorInsets;
 @property (nonatomic, assign) CGFloat lastKeyboardAdjustment;
-
 
 @end
 
 @implementation ImagesTableViewController
-
 
 
 - (void)viewDidLoad {
@@ -89,11 +84,6 @@
         // Custom initialization
         
     }
-    
-    self.initialInset = self.tableView.contentInset;
-    self.initialOffset = self.tableView.contentOffset;
-    self.initialScrollIndicatorInsets = self.tableView.scrollIndicatorInsets;
-    
     return self;
 }
 
@@ -225,15 +215,19 @@
     CGRect commentViewFrameInViewCoordinates = [self.navigationController.view convertRect:self.lastSelectedCommentView.bounds fromView:self.lastSelectedCommentView];
     
     CGPoint contentOffset = self.tableView.contentOffset;
-    UIEdgeInsets contentInsets = self.initialInset;
-    UIEdgeInsets scrollIndicatorInsets = self.initialScrollIndicatorInsets;
+    UIEdgeInsets contentInsets = self.tableView.contentInset;
+    UIEdgeInsets scrollIndicatorInsets = self.tableView.scrollIndicatorInsets;
     CGFloat heightToScroll = 0;
     
     CGFloat keyboardY = CGRectGetMinY(keyboardFrameInViewCoordinates);
+    NSLog(@"keyboardy: %f", keyboardY);
+
     CGFloat commentViewY = CGRectGetMinY(commentViewFrameInViewCoordinates);
+    NSLog(@"commentviewy: %f", commentViewY);
+
     CGFloat difference = commentViewY - keyboardY;
-    
-    if (difference > 0) {
+
+    if (difference != 0) {
         heightToScroll += difference;
     }
     
@@ -242,8 +236,8 @@
         CGRect intersectionRect = CGRectIntersection(keyboardFrameInViewCoordinates, commentViewFrameInViewCoordinates);
         heightToScroll += CGRectGetHeight(intersectionRect);
     }
-    
-    if (heightToScroll > 0) {
+
+    if (heightToScroll != 0) {
         contentInsets.bottom += heightToScroll;
         scrollIndicatorInsets.bottom += heightToScroll;
         contentOffset.y += heightToScroll;
@@ -271,7 +265,7 @@
     UIEdgeInsets contentInsets = self.tableView.contentInset;
     contentInsets.bottom -= self.lastKeyboardAdjustment;
     
-    UIEdgeInsets scrollIndicatorInsets = self.initialScrollIndicatorInsets;
+    UIEdgeInsets scrollIndicatorInsets = self.tableView.scrollIndicatorInsets;
     scrollIndicatorInsets.bottom -= self.lastKeyboardAdjustment;
     
     NSNumber *durationNumber = notification.userInfo[UIKeyboardAnimationDurationUserInfoKey];
@@ -284,6 +278,7 @@
     [UIView animateWithDuration:duration delay:0 options:options animations:^{
         self.tableView.contentInset = contentInsets;
         self.tableView.scrollIndicatorInsets = scrollIndicatorInsets;
+
     } completion:nil];
     
 }
@@ -301,14 +296,23 @@
     
     MediaFullScreenViewController *fullScreenVC = [[MediaFullScreenViewController alloc] initWithMedia:cell.mediaItem];
     
-    fullScreenVC.transitioningDelegate = self;
-    fullScreenVC.modalPresentationStyle = UIModalPresentationCustom;
+    if (isPhone) {
+        fullScreenVC.transitioningDelegate = self;
+        fullScreenVC.modalPresentationStyle = UIModalPresentationCustom;
+    } else {
+        fullScreenVC.modalPresentationStyle = UIModalPresentationFormSheet;
+    }
     
     [self presentViewController:fullScreenVC animated:YES completion:nil];
 }
 
 - (void) cell:(MediaTableViewCell *)cell didLongPressImageView:(UIImageView *)imageView {
-    [self shareMedia:cell.mediaItem];
+    
+    if (isPhone) {
+        [self shareMedia:cell.mediaItem];
+    } else {
+        [self shareMedia:cell.mediaItem andSender:imageView];
+    }
 }
 
 - (void) cellDidPressLikeButton:(MediaTableViewCell *)cell {

@@ -9,11 +9,13 @@
 #import "MediaFullScreenViewController.h"
 #import "UIViewController+Sharing.h"
 
-@interface MediaFullScreenViewController () <UIScrollViewDelegate>
+@interface MediaFullScreenViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) Media *media;
 @property (nonatomic, strong) UITapGestureRecognizer *tap;
 @property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+
+@property (nonatomic, strong) UITapGestureRecognizer *tapBehind;
 
 @end
 
@@ -46,11 +48,20 @@
     self.scrollView.contentSize = self.media.image.size;
     
     self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
+    self.tap.delegate = self;
     
     self.doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapFired:)];
     self.doubleTap.numberOfTapsRequired = 2;
+    self.doubleTap.delegate = self;
     
     [self.tap requireGestureRecognizerToFail:self.doubleTap];
+    
+    if (isPhone == NO) {
+        self.tapBehind = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapBehindFired:)];
+        self.tapBehind.cancelsTouchesInView = NO;
+        self.tapBehind.numberOfTapsRequired = 1;
+        self.tapBehind.delegate = self;
+    }
     
     [self.scrollView addGestureRecognizer:self.tap];
     [self.scrollView addGestureRecognizer:self.doubleTap];
@@ -114,6 +125,21 @@
     [super viewWillAppear:animated];
     
     [self centerScrollView];
+    
+    NSLog(@"%d", isPhone);
+    
+    if (isPhone == NO) {
+        [[[[UIApplication sharedApplication] delegate] window] addGestureRecognizer:self.tapBehind];
+        NSLog(@"TapBehind %@", self.tapBehind);
+    }
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    if (isPhone == NO) {
+        [[[[UIApplication sharedApplication] delegate] window] removeGestureRecognizer:self.tapBehind];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -153,6 +179,28 @@
         [self.scrollView setZoomScale:self.scrollView.minimumZoomScale animated:YES];
     }
 }
+
+- (void) tapBehindFired:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        CGPoint location = [sender locationInView:nil]; // Passing nil gives us coordinates in the window
+        CGPoint locationInVC = [self.presentedViewController.view convertPoint:location fromView:self.view.window];
+        
+        if ([self.presentedViewController.view pointInside:locationInVC withEvent:nil] == NO) {
+            // The tap was outside the VC's view
+            
+            if (self.presentingViewController) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        }
+    }
+}
+
+#pragma mark UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
 /*
 #pragma mark - Navigation
 

@@ -13,4 +13,6 @@
 
 - (void)shareMedia:(Media *)mediaItem;
 
+- (void)shareMedia:(Media *)mediaItem andSender:(id)sender;
+
 @end
